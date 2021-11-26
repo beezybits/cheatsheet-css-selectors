@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet" rel="stylesheet">
+	<title>CSS Selectors Cheatsheet</title>
+</head>
+<body>
+	<a id="top"></a>
+	<h1>CSS Selectors Cheatsheet</h1>
+
+	<p>In CSS, we use "selectors" in order to select the HTML elements we want to style. There are 5 main categories of CSS selectors :</p>
+	<ul class="ticks">
+		<li class="ticks"><a href="#simple">Simple selectors</a></li>
+		<li class="ticks"><a href="#combinator">Combinator selectors</a></li>
+		<li class="ticks"><a href="#pseudo_class">Pseudo-class selectors</a></li>
+		<li class="ticks"><a href="#pseudo_element">Pseudo-element selectors</a></li>
+		<li class="ticks"><a href="#attribute">Attribute selectors</a></li>
+	</ul>
+	<h2 id="simple"><a href="https://www.w3schools.com/css/css_selectors.asp">Simple Selectors</a></h2>
+	<p>Element selectors select HTML elements based on the element name.</p>
+	<table>
+		<thead>
+			<th>Selector</th>
+			<th>Example</th>
+			<th>Description</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>element</td>
+				<td>p</td>
+				<td>Selects all <span class="code">&lt;p&gt;</span> elements</td>
+			</tr>
+			<tr>
+				<td>element, element</td>
+				<td>div, p</td>
+				<td>Selects all <span class="code">&lt;div&gt;</span> elements and all <span class="code">&lt;p&gt;</span> elements</td>
+			</tr>
+			<tr>
+				<td>.class</td>
+				<td>.intro</td>
+				<td>Selects all elements with class="intro"</td>
+			</tr>
+			<tr>
+				<td>element.class</td>
+				<td>p.intro</td>
+				<td>Selects only <span class="code">&lt;p&gt;</span> with class="intro"</td>
+			</tr>
+			<tr>
+				<td>#id</td>
+				<td>#firstname</td>
+				<td>Selects the element with id="firstname"</td>
+			</tr>
+			<tr>
+				<td>*</td>
+				<td>*</td>
+				<td>Selects all elements</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2 id="combinator"><a href="https://www.w3schools.com/css/css_combinators.asp">Combinator Selectors</a></h2>
+	<p>Combinator selectors select elements based in a special relationship between them.</p>
+	<table>
+		<thead>
+			<th>Selector</th>
+			<th>Example</th>
+			<th>Example description</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>element element</td>
+				<td>div p</td>
+				<td>Selects all <span class="code">&lt;p&gt;</span> elements inside <span class="code">&lt;div&gt;</span> elements</td>
+			</tr>
+			<tr>
+				<td>element>element</td>
+				<td>div > p</td>
+				<td>Selects all <span class="code">&lt;p&gt;</span> elements where the parent is a <span class="code">&lt;div&gt;</span></td>
+			</tr>
+			<tr>
+				<td>element+element</td>
+				<td>div + p</td>
+				<td>Selects the first <span class="code">&lt;p&gt;</span> elements that are placed after <span class="code">&lt;div&gt;</span> elements</td>
+			</tr>
+			<tr>
+				<td>element1~element2</td>
+				<td>p ~ ul</td>
+				<td>Selects all <span class="code">&lt;ul&gt;</span> elements that are preceded by a <span class="code">&lt;p&gt;</span> element</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">Pseudo-class Selectors</a></h2>
+	<p>Pseudo-class selectors select elements based on a certain state. For example it can be used to :</p>
+	<ul class="thumbs">
+		<li class="thumbs">Style an element when a user mouses over it</li>
+		<li class="thumbs">Style visited and unvisited links differently</li>
+		<li class="thumbs">Style an element when it gets focus</li>
+	</ul>
+	<table>
+		<thead>
+			<th>Selector</th>
+			<th>Example</th>
+			<th>Example descriptionn</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>:active</td>
+				<td>a:active</td>
+				<td>Selects the active link</td>
+			</tr>
+			<tr>
+				<td>:checked</td>
+				<td>input:checked</td>
+				<td>Selects every checked <span class="code">&lt;input&gt;</span> element</td>
+			</tr>
+			<tr>
+				<td>:disabled</td>
+				<td>input:disabled</td>
+				<td>Selects every disabled <span class="code">&lt;input&gt;</span> element</td>
+			</tr>
+			<tr>
+				<td>:empty</td>
+				<td>p:empty</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that has no children</td>
+			</tr>
+			<tr>
+				<td>:enabled</td>
+				<td>input:enabled</td>
+				<td>Selects every enabled <span class="code">&lt;input&gt;</span> element</td>
+			</tr>
+			<tr>
+				<td>:first-child</td>
+				<td>p:first-child</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the fist child of its parent</td>
+			</tr>
+			<tr>
+				<td>:first-of-type</td>
+				<td>p:first-of-type</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the fist <span class="code">&lt;p&gt;</span> element of its parent</td>
+			</tr>
+			<tr>
+				<td>:focus</td>
+				<td>input:focus</td>
+				<td>Selects the <span class="code">&lt;input&gt;</span> element that has focus</td>
+			</tr>
+			<tr>
+				<td>:hover</td>
+				<td>a:hover</td>
+				<td>Selects links on mouse over</td>
+			</tr>
+			<tr>
+				<td>:in-range</td>
+				<td>input:in-range</td>
+				<td>Selects <span class="code">&lt;input&gt;</span> elements with a value within a specified range</td>
+			</tr>
+			<tr>
+				<td>:invalid</td>
+				<td>input:invalid</td>
+				<td>Selects all <span class="code">&lt;input&gt;</span> elements with an invalid value</td>
+			</tr>
+			<tr>
+				<td>:lang(<span class="italic">langage</span>)</td>
+				<td>p:lang(it)</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element with a lang attribute value starting with "it"</td>
+			</tr>
+			<tr>
+				<td>:last-child</td>
+				<td>p:last-child</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the fist child of its parent</td>
+			</tr>
+			<tr>
+				<td>:last-child</td>
+				<td>p:last-child</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the last child of its parent</td>
+			</tr>
+			<tr>
+				<td>:last-of-type</td>
+				<td>p:last-of-type</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the last <span class="code">&lt;p&gt;</span> element of its parent</td>
+			</tr>
+			<tr>
+				<td>:link</td>
+				<td>a:link</td>
+				<td>Selects all unvisited links</td>
+			</tr>
+			<tr>
+				<td>:not(selector)</td>
+				<td>:not(p)</td>
+				<td>Selects every element that is not a <span class="code">&lt;p&gt;</span> element</td>
+			</tr>
+			<tr>
+				<td>:nth-child(n)</td>
+				<td>p:nth-child(2)</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the second child of its parent</td>
+			</tr>
+			<tr>
+				<td>:nth-last-child(n)</td>
+				<td>p:nth-last-child(2)</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the second child of its parent, counting from the last child</td>
+			</tr>
+			<tr>
+				<td>:nth-last-of-type(n)</td>
+				<td>p:nth-last-of-type(2)</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the second <span class="code">&lt;p&gt;</span> element of its parent, counting from the last child</td>
+			</tr>
+			<tr>
+				<td>:nth-of-type(n)</td>
+				<td>p:nth-of-type(2)</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the second <span class="code">&lt;p&gt;</span> element of its parent</td>
+			</tr>
+			<tr>
+				<td>:only-of-type</td>
+				<td>p:only-of-type</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the only <span class="code">&lt;p&gt;</span> element of its parent</td>
+			</tr>
+			<tr>
+				<td>:only-child</td>
+				<td>p:only-child</td>
+				<td>Selects every <span class="code">&lt;p&gt;</span> element that is the only child of its parent</td>
+			</tr>
+			<tr>
+				<td>:optional</td>
+				<td>input:optional</td>
+				<td>Selects <span class="code">&lt;input&gt;</span> elements with no "required" attribute</td>
+			</tr>
+			<tr>
+				<td>:out-of-range</td>
+				<td>input:out-of-range</td>
+				<td>Selects <span class="code">&lt;input&gt;</span> elements with a value outside a specified range</td>
+			</tr>
+			<tr>
+				<td>:read-only</td>
+				<td>input:read-only</td>
+				<td>Selects <span class="code">&lt;input&gt;</span> elements with a "readonly" attribute specified</td>
+			</tr>
+			<tr>
+				<td>:read-write</td>
+				<td>input:read-write</td>
+				<td>Selects <span class="code">&lt;input&gt;</span> elements with no "readonly" attribute</td>
+			</tr>
+			<tr>
+				<td>:required</td>
+				<td>input:required</td>
+				<td>Selects <span class="code">&lt;input&gt;</span> elements with a "required" attribute specified</td>
+			</tr>
+			<tr>
+				<td>:root</td>
+				<td>root</td>
+				<td>Selects the document's root element</td>
+			</tr>
+			<tr>
+				<td>:target</td>
+				<td>#news:target</td>
+				<td>Selects the current active #news element (clicked on a URL containing that anchor name</td>
+			</tr>
+			<tr>
+				<td>:valid</td>
+				<td>:input:valid</td>
+				<td>Selects all <span class="code">&lt;input&gt;</span> elements with a valid value</td>
+			</tr>
+			<tr>
+				<td>:visited</td>
+				<td>a:visited</td>
+				<td>Selects all visited links</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2><a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Pseudo-element Selectors</a></h2>
+	<p>A CSS pseudo-element is used to style specified parts of an element. For example it can be used to :</p>
+	<ul class="thumbs">
+		<li class="thumbs">Style the first letter or line of an element</li>
+		<li class="thumbs">Insert content before or after the content of an element</li>
+	</ul>
+	<table>
+		<thead>
+			<th>Selector</th>
+			<th>Example</th>
+			<th>Example description</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>::after</td>
+				<td>p::after</td>
+				<td>Inserts content after every <span class="code">&lt;p&gt;</span> element</td>
+			</tr>
+			<tr>
+				<td>::before</td>
+				<td>p::before</td>
+				<td>Inserts content before every <span class="code">&lt;p&gt;</span> element</td>
+			</tr>
+			<tr>
+				<td>::first-letter</td>
+				<td>p::first-letter</td>
+				<td>Selects the first letter of every <span class="code">&lt;p&gt;</span> element</td>
+			</tr>
+			<tr>
+				<td>::first-line</td>
+				<td>p::first-line</td>
+				<td>Selects the first line of every <span class="code">&lt;p&gt;</span> element</td>
+			</tr>
+			<tr>
+				<td>::selection</td>
+				<td>p::selection</td>
+				<td>Selects the portion of an element that is selected by a user</td>
+			</tr>
+		</tbody>		
+	</table>
+	<h2 id="attribute"><a href="https://www.w3schools.com/css/css_attribute_selectors.asp">Attribute Selectors</a></h2>
+	<p>Attribute selectors select elements based on an attribute or an attribute value.</p>
+	<table>
+		<thead>
+			<th>Selector</th>
+			<th>Example</th>
+			<th>Example description</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>[<span class="italic">attribute</span>]</td>
+				<td>[target]</td>
+				<td>Selects all elements with a target attribute</td>
+			</tr>
+			<tr>
+				<td>[<span class="italic">attribute=value</span>]</td>
+				<td>[target=_blank]</td>
+				<td>Selects all elements with "target"=_blank</td>
+			</tr>
+			<tr>
+				<td>[<span class="italic">attribute~=value</span>]</td>
+				<td>[title~=flower]</td>
+				<td>Selects all elements with a title attribute containing the word "flower"</td>
+			</tr>
+			<tr>
+				<td>[<span class="italic">attribute|=value</span>]</td>
+				<td>[lang|=en]</td>
+				<td>Selects all elements with a lang attribute starting with "en"</td>
+			</tr>
+			<tr>
+				<td>[<span class="italic">attribute^=value</span>]</td>
+				<td>a[href^="https"]</td>
+				<td>Selects every <span class="code">&lt;a&gt;</span> element whose href attribute value begins with "https"</td>
+			</tr>
+			<tr>
+				<td>[<span class="italic">attribute$=value</span>]</td>
+				<td>a[href$=".pdf"]</td>
+				<td>Selects every <span class="code">&lt;a&gt;</span> element whose href attribute value ends with ".pdf"</td>
+			</tr>
+			<tr>
+				<td>[<span class="italic">attribute*=value</span>]</td>
+				<td>a[href*="w3schools"]</td>
+				<td>Selects every <span class="code">&lt;a&gt;</span> element whose href attribute value contains the substring "w3schools"</td>
+			</tr>
+		</tbody>		
+	</table>
+	<!--<button onclick="topFuntion()" id="myBtn" title="Go to Top"><a href="#top"><img src="./resources/top_button.png" alt="top_button"></a></button>-->
+	<a id="back_to_top" href="#top"><img src="./resources/top_button.png" alt="top_button"></a>
+</body>
+</html>

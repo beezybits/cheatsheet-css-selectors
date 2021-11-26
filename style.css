@@ -1,0 +1,102 @@
+*:not(h1){
+	font-family: sans-serif;
+}
+
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 3.5em;
+	text-align: center;
+	padding-top: 0.4em;
+	padding-bottom: 0.8em;
+}
+
+.code{
+	font-family: monospace;
+	font-size: 1.2em;
+	background-color: #B9F3DE;
+	border-radius: 10%;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+	color: black;
+}
+
+li > a:hover, h2 > a:hover{ /* Selects all <a> elements where the parent is a <ul> */
+	font-size: 150%;
+}
+
+li{
+	padding-left: 5px;
+}
+
+ul.ticks{
+	list-style-type: none;
+	margin-left: -10px;
+
+}
+
+li.ticks{
+	position: relative;
+	padding-left: 1.5em; /* space to preserve indentation on wrap */
+}
+
+li.ticks:before{
+	content: url("./resources/checked.png");
+	position: absolute;
+	left: 0; /* place the ticks at the start of the padding */
+}
+
+
+ul.thumbs{
+	list-style-type: "\1F44D"; // thumbs up sign
+}
+
+h2{
+	padding-top: 1.5em;
+	border-bottom: solid 5px #216f53;
+}
+
+table{
+	border-collapse: collapse;
+	margin:  25px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	border-bottom: solid 3px #216f53;
+
+}
+
+thead{
+	background-color: #216f53;
+	color: white;
+}
+
+th, td{
+	padding:  12px 15px;
+}
+
+tbody tr{
+	border-bottom: solid 1px #dddddd;
+}
+
+tbody tr:nth-of-type(even){
+	background-color: #f3f3f3;
+}
+
+#back_to_top{
+	position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* To make sure it does not overlap */
+    /*border:  none;*/
+    background-color: white;
+    border-radius: 10px;
+    padding: 4px 4px 1px;
+    cursor: pointer; /* Add a mouse pointer on hoover */
+
+}
+
+#back_to_top:hover{
+	box-shadow: 2px 2px 8px #2e3c49;
+}
